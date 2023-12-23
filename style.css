@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/img/bg.jpg");
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contenedor {
+    width: 70%;
+    padding-top: 50px;
+}
+
+.contenedor h1{
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #000;
+    text-shadow: 2px 2px 2px #333;
+}
+
+
+/*  FORMULARIO  */
+
+.form-filter {
+    margin-top: 60px;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 28px;
+    margin: 20px 0;
+}
+
+.cont-select {
+    display: flex;
+    flex-direction: column;
+}
+
+.cont-select label {
+    color: #fff;
+    text-shadow: 2px 2px 2px #333;
+}
+
+.cont-select select {
+    background-color: #00000050 !important;
+    color: #e3e3e3e3;
+    padding: 10px;
+    border: 1px solid #ededed;
+    border-radius: 4px;
+    width: 250px;
+}
+
+.cont-select select option {
+    background-color: #000000 !important;
+    font-size: 16px;
+}
+
+/* Tarjeta */
+
+.container-cards {
+    padding: 20px;
+    height: 55vh;
+    width: 80%;
+    overflow-y: auto;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container-cards .card {
+    border: 1px solid #fafafa50;
+    border-radius: 9px;
+    overflow: hidden;
+    background-color: #00000090;
+    height: min-content;
+    width: 250px;
+}
+
+.container-cards .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.container-cards .card p {
+    color: #e3e3e3e3;
+    text-align: center;
+    padding: 5px 20px;
+}
+
+/* Personalizar la barra de desplazamiento */
