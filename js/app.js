@@ -1,21 +1,4 @@
 const card = document.querySelector(".container-cards");
-
-autos.forEach((i) => {
-    card.innerHTML += `
-    <div class="card">
-        <img src="${i.imagen}" alt="">
-        <div class="descripcion-card">
-            <p>${i.marca} - ${i.modelo} - ${i.year}</p>
-            <p>Transmision - ${i.transmision}</p>
-            <p>Puertas - ${i.puertas}</p>
-            <p>Precio - ${i.precio}</p>
-            <p>Color - ${i.color}</p>
-
-        </div>
-    </div>
-    `;
-});
-
 const contenedor = document.querySelector(".container-cards");
 const marca = document.querySelector("#marca");
 const year = document.querySelector("#year");
@@ -34,7 +17,7 @@ const datosBusqueda = {
     maximo: "",
     puertas: "",
     transmision: "",
-    color: "",
+    color: ""
 };
 
 
@@ -49,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // por cada iteracion se crea una etiqueta Opcion
         const option = document.createElement("option");
         // El valordel option es el iterador
-        option.value = 1;
+        option.value = index;
         // El texto tambien 
         option.innerText = index;
         // Añadirlo al select
@@ -95,7 +78,7 @@ transmision.addEventListener("input", (event) => {
 });
 
 color.addEventListener("input", (event) => {
-    color.addEventListener = event.target.value;
+    datosBusqueda.color = event.target.value;
     filtrarAuto();
 });
 
@@ -129,7 +112,7 @@ function filtrarPorColor(auto) {
 
 function filtrarPorTransmision(auto) {
     if (datosBusqueda.transmision) {
-        return datosBusqueda.transmision == auto.transmision
+        return auto.transmision == datosBusqueda.transmision
     }
     return auto
 }
