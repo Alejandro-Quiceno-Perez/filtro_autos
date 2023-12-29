@@ -100,3 +100,16 @@
 }
 
 /* Personalizar la barra de desplazamiento */
+
+.container-cards::-webkit-scrollbar {
+  width: 10px;
+}
+
+.container-cards::-webkit-scrollbar-thumb {
+  background: #fafafa50;
+  border-radius: 20px;
+}
+
+.container-cards::-webkit-scrollbar-thumb:hover {
+  background: #3e3e3e72;
+}
